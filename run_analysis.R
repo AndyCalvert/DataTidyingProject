@@ -159,4 +159,4 @@ names( filteredData ) <- featureNames
 df <- as.tbl( filteredData)
 grouped <- group_by( df, Subject, Activity )
 tidied <- summarise_each( grouped, funs( mean ))
-write.table( "tidiedData", row.name=FALSE )
+write.table( tidied, "tidiedData.txt", row.name=FALSE )
